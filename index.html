@@ -11,12 +11,33 @@
             padding: 0;
             background-color: #f4f4f4;
         }
+
         header {
             background-color: #35424a;
             color: white;
             padding: 20px;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
+
+        header nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        header nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        header nav a:hover {
+            text-decoration: underline;
+        }
+
         .container {
             max-width: 800px;
             margin: 20px auto;
@@ -24,42 +45,41 @@
             background-color: white;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
+
         .project {
             margin-top: 20px;
         }
+
         .project-title {
-            font-size: 18px;
+            font-size: 20px;
             font-weight: bold;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
         }
+
         .project-details {
             font-size: 16px;
             margin-bottom: 10px;
         }
-		.step {
-            margin-left: 20px;
-            margin-bottom: 10px;
-        }
-        .project-step {
-            margin-left: 40px;
-            margin-bottom: 10px;
-        }
+
         .skills {
             background-color: #e9e9e9;
             padding: 20px;
             margin-top: 20px;
             border-radius: 5px;
         }
+
         .skills-title {
             font-size: 24px;
             margin-bottom: 10px;
         }
+
         .skills-list {
             list-style: none;
             padding: 0;
             display: flex;
             flex-wrap: wrap;
         }
+
         .skill {
             background-color: #35424a;
             color: white;
@@ -69,112 +89,122 @@
             border-radius: 3px;
         }
 
+        .menu {
+            margin-top: 30px;
+        }
+
+        .menu h2 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .menu ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .menu ul li {
+            margin-bottom: 10px;
+        }
+
+        .menu ul li a {
+            text-decoration: none;
+            font-size: 18px;
+            color: #35424a;
+            padding: 10px 15px;
+            display: block;
+            background-color: #e9e9e9;
+            border-radius: 5px;
+        }
+
+        .menu ul li a:hover {
+            background-color: #35424a;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .skills-list {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .menu ul li a {
+                font-size: 16px;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Sreenath Veeraiahgari</h1>
         <p>Software Developer</p>
+        <nav>
+            <a href="#about">About Me</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#menu">Personal Projects</a>
+        </nav>
     </header>
-    <div class="container">
+
+    <div id="about" class="container">
         <h2>About Me</h2>
         <p>Hello! I'm Sreenath Veeraiahgari, a Software Developer with experience in various technologies and tools.</p>
         <p>I specialize in working with a wide range of technologies, including Spark, Oracle, MySQL, SQL Server, Redshift, DBeaver, S3, ETL, SQL, Python, Shell, Java, Spring, Spring Boot, Angular, HTML, CSS, AWS, Google Cloud, and more.</p>
         <p>I'm experienced in handling tasks such as Google Cloud migration, Google Cloud Storage, Data Proc, App Engine, REST, Web Services, Git, SVN, Jira, ServiceNow, Kafka, MQ, ELK, production support, Agile methodologies, and sprints.</p>
+    </div>
 
-        <div class="skills">
-            <h2 class="skills-title">Technical Skills</h2>
-            <ul class="skills-list">
-                <li class="skill">Spark</li>
-                <li class="skill">Oracle</li>
-                <li class="skill">MySQL</li>
-                <li class="skill">SQL Server</li>
-                <li class="skill">Redshift</li>
-                <li class="skill">DBeaver</li>
-                <li class="skill">S3</li>
-                <li class="skill">ETL</li>
-                <li class="skill">SQL</li>
-                <li class="skill">Python</li>
-                <li class="skill">Shell</li>
-                <li class="skill">Java</li>
-                <li class="skill">Spring</li>
-                <li class="skill">Spring Boot</li>
-                <li class="skill">Angular</li>
-                <li class="skill">HTML</li>
-                <li class="skill">CSS</li>
-                <li class="skill">AWS to Google Cloud Migration</li>
-                <li class="skill">Google Cloud Storage</li>
-                <li class="skill">Data Proc</li>
-                <li class="skill">App Engine</li>
-                <!-- Add more skills here -->
-            </ul>
-        </div>
-        
-         <div class="project">
-            <h3 class="project-title">Software Engineer (July 2012 - July 2015)</h3>
-            <p class="project-details">
-                Worked on various projects involving Java, Spring, HTML, CSS, JavaScript, jQuery, AJAX, and MySQL. My responsibilities included:
-            </p>
-            <div class="project-step">
-                <p>Designed and developed user-friendly web interfaces using HTML, CSS, and JavaScript.</p>
-            </div>
-            <div class="project-step">
-                <p>Implemented server-side logic using Java and Spring framework.</p>
-            </div>
-            <div class="project-step">
-                <p>Created and optimized database schemas using MySQL.</p>
-            </div>
-            <div class="project-step">
-                <p>Enhanced user experience by incorporating dynamic content through jQuery and AJAX.</p>
-            </div>
-        </div>
-        
+    <div id="skills" class="container skills">
+        <h2 class="skills-title">Technical Skills</h2>
+        <ul class="skills-list">
+            <li class="skill">Spark</li>
+            <li class="skill">Oracle</li>
+            <li class="skill">MySQL</li>
+            <li class="skill">SQL Server</li>
+            <li class="skill">Redshift</li>
+            <li class="skill">DBeaver</li>
+            <li class="skill">S3</li>
+            <li class="skill">ETL</li>
+            <li class="skill">SQL</li>
+            <li class="skill">Python</li>
+            <li class="skill">Shell</li>
+            <li class="skill">Java</li>
+            <li class="skill">Spring</li>
+            <li class="skill">Spring Boot</li>
+            <li class="skill">Angular</li>
+            <li class="skill">HTML</li>
+            <li class="skill">CSS</li>
+            <li class="skill">AWS to Google Cloud Migration</li>
+            <li class="skill">Google Cloud Storage</li>
+            <li class="skill">Data Proc</li>
+            <li class="skill">App Engine</li>
+        </ul>
+    </div>
+
+    <div id="projects" class="container">
+        <h2>Projects</h2>
         <div class="project">
-            <h3 class="project-title">Software Engineer - Java Software Developer (Jan 2017 - July 2017)</h3>
-            <p class="project-details">
-                Contributed to web application development using Java. I was involved in:
-            </p>
-            <div class="project-step">
-                <p>Collaborated with cross-functional teams to gather requirements and define project scope.</p>
-            </div>
-            <div class="project-step">
-                <p>Designed and implemented Java-based solutions for web applications.</p>
-            </div>
-            <div class="project-step">
-                <p>Created dynamic and user-friendly interfaces for improved usability.</p>
-            </div>
+            <h3 class="project-title">Software Engineer (July 2012 - July 2015)</h3>
+            <p class="project-details">Worked on various projects involving Java, Spring, HTML, CSS, JavaScript, jQuery, AJAX, and MySQL.</p>
         </div>
-        
-       <div class="project">
-            <h3 class="project-title">Software Developer - Web Apps and Big Data Engineer (July 2017 - Present)</h3>
-            <p class="project-details">
-                Involved in the development of web applications and big data solutions. My role includes:
-            </p>
-            <div class="project-step">
-                <h4>Web Application Development</h4>
-                <p>Designed and developed scalable web applications using technologies like Angular, HTML, and CSS.</p>
-                <p>Implemented interactive user interfaces with Angular to enhance user experience.</p>
-                <p>Utilized Java, Spring, and Spring Boot to build robust backend systems that handle data processing and user authentication.</p>
-                <p>Integrated front-end and back-end components to create seamless user workflows.</p>
-                <p>Utilized CSS pre-processors like SASS for efficient styling and theming.</p>
-            </div>
-            <div class="project-step">
-                <h4>Big Data Solutions</h4>
-                <p>Utilized Spark for distributed data processing, enabling efficient analysis of large datasets.</p>
-                <p>Designed and implemented ETL processes using SQL and Python to transform and load data into various data stores including Oracle, MySQL, and Redshift.</p>
-                <p>Utilized shell scripting for automating data extraction, transformation, and loading tasks.</p>
-                <p>Developed complex SQL queries to extract meaningful insights from data.</p>
-                <p>Optimized data processing pipelines for better performance.</p>
-            </div>
-            <div class="project-step">
-                <h4>Cloud Migration and Integration</h4>
-                <p>Executed migration from AWS to Google Cloud Platform, ensuring data consistency and minimal downtime.</p>
-                <p>Implemented RESTful APIs and web services using Java and Spring to facilitate communication between various components of the system.</p>
-                <p>Utilized Google Cloud Storage for efficient storage and retrieval of data.</p>
-                <p>Deployed applications on Google App Engine, taking advantage of auto-scaling and managed infrastructure.</p>
-                <p>Implemented security measures like OAuth2 for ensuring secure access to APIs.</p>
-            </div>
+
+        <div class="project">
+            <h3 class="project-title">Java Software Developer (Jan 2017 - July 2017)</h3>
+            <p class="project-details">Contributed to web application development using Java.</p>
         </div>
+
+        <div class="project">
+            <h3 class="project-title">Web Apps and Big Data Engineer (July 2017 - Present)</h3>
+            <p class="project-details">Developed scalable web applications and big data solutions.</p>
+        </div>
+    </div>
+
+    <div id="menu" class="container menu">
+        <h2>Personal Projects</h2>
+        <ul>
+            <li><a href="#">Project 1: Responsive Portfolio</a></li>
+            <li><a href="#">Project 2: Angular E-Commerce App</a></li>
+            <li><a href="#">Project 3: Flask Data Visualization Tool</a></li>
+        </ul>
     </div>
 </body>
 </html>
