@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sreenath Veeraiahgari - Software Developer</title>
+    <title>Sreenath Veeraiahgari - Data Engineer</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            color: #333;
         }
 
         header {
@@ -22,6 +23,16 @@
             z-index: 1000;
         }
 
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        header p {
+            margin: 5px 0 15px;
+            font-size: 18px;
+        }
+
         header nav {
             display: flex;
             justify-content: center;
@@ -31,7 +42,7 @@
         header nav a {
             color: white;
             text-decoration: none;
-            font-size: 18px;
+            font-size: 16px;
         }
 
         header nav a:hover {
@@ -39,172 +50,154 @@
         }
 
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 20px auto;
             padding: 20px;
             background-color: white;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
         }
 
-        .project {
-            margin-top: 20px;
-        }
-
-        .project-title {
-            font-size: 20px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .project-details {
-            font-size: 16px;
-            margin-bottom: 10px;
-        }
-
-        .skills {
-            background-color: #e9e9e9;
-            padding: 20px;
-            margin-top: 20px;
-            border-radius: 5px;
-        }
-
-        .skills-title {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        .skills-list {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        .skill {
-            background-color: #35424a;
-            color: white;
-            font-size: 16px;
-            padding: 5px 10px;
-            margin: 5px;
-            border-radius: 3px;
-        }
-
-        .menu {
-            margin-top: 30px;
-        }
-
-        .menu h2 {
-            font-size: 22px;
+        h2 {
+            color: #35424a;
             margin-bottom: 15px;
         }
 
-        .menu ul {
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .contact-info {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .skills-list, .employment-list, .education-list {
             list-style: none;
             padding: 0;
         }
 
-        .menu ul li {
+        .skills-list li, .employment-list li, .education-list li {
             margin-bottom: 10px;
         }
 
-        .menu ul li a {
-            text-decoration: none;
-            font-size: 18px;
-            color: #35424a;
-            padding: 10px 15px;
-            display: block;
-            background-color: #e9e9e9;
-            border-radius: 5px;
-        }
-
-        .menu ul li a:hover {
+        .skills-list li {
+            display: inline-block;
             background-color: #35424a;
             color: white;
+            padding: 5px 10px;
+            margin: 5px;
+            border-radius: 3px;
+            font-size: 14px;
         }
 
-        @media (max-width: 768px) {
-            .skills-list {
-                flex-direction: column;
-                align-items: center;
-            }
+        .employment-item, .education-item {
+            margin-bottom: 20px;
+        }
 
-            .menu ul li a {
-                font-size: 16px;
-            }
+        .employment-item h3, .education-item h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #35424a;
+        }
+
+        .employment-item p, .education-item p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #35424a;
+            color: white;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Sreenath Veeraiahgari</h1>
-        <p>Software Developer</p>
+        <p>Data Engineer</p>
         <nav>
-            <a href="#about">About Me</a>
+            <a href="#summary">Summary</a>
+            <a href="#employment">Employment</a>
+            <a href="#education">Education</a>
             <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#menu">Personal Projects</a>
         </nav>
     </header>
 
-    <div id="about" class="container">
-        <h2>About Me</h2>
-        <p>Hello! I'm Sreenath Veeraiahgari, a Software Developer with experience in various technologies and tools.</p>
-        <p>I specialize in working with a wide range of technologies, including Spark, Oracle, MySQL, SQL Server, Redshift, DBeaver, S3, ETL, SQL, Python, Shell, Java, Spring, Spring Boot, Angular, HTML, CSS, AWS, Google Cloud, and more.</p>
-        <p>I'm experienced in handling tasks such as Google Cloud migration, Google Cloud Storage, Data Proc, App Engine, REST, Web Services, Git, SVN, Jira, ServiceNow, Kafka, MQ, ELK, production support, Agile methodologies, and sprints.</p>
+    <div id="summary" class="container section">
+        <h2>Professional Summary</h2>
+        <p>Big Data Engineer with 10+ years of extensive expertise in crafting scalable data solutions across diverse platforms. Proficient in leveraging advanced tools like Python, Spark, SQL, and cloud services such as GCP and AWS to optimize data pipelines and enhance predictive analytics. Committed to driving innovation in data engineering by integrating cutting-edge AI technologies, with a strong foundation in cloud technologies and a passion for developing impactful data-driven solutions.</p>
+        <div class="contact-info">
+            <p>1403 Ballyshannon Dr, Bloomington, United States, 61704</p>
+            <p>Email: reddysvc9@gmail.com | Phone: 816-801-0972</p>
+        </div>
     </div>
 
-    <div id="skills" class="container skills">
-        <h2 class="skills-title">Technical Skills</h2>
+    <div id="employment" class="container section">
+        <h2>Employment History</h2>
+        <ul class="employment-list">
+            <li class="employment-item">
+                <h3>Big Data Engineer - Dignity Health (Contract)</h3>
+                <p><strong>Jul 2017 - Present</strong> | Phoenix, AZ (Remote)</p>
+                <p>Designed & developed scalable data pipelines using Python, GCP (Dataflow, Composer, Airflow) for batch & real-time processing. Integrated Vertex AI LLMs for search & sort functionality using NLP & GenAI, enhancing data retrieval. Built Spark applications for data transformation and aggregation across Oracle, MySQL, SQL Server.</p>
+            </li>
+            <li class="employment-item">
+                <h3>Software Developer - Insight Intelli</h3>
+                <p><strong>Jan 2017 - Jul 2017</strong> | Charlotte, NC</p>
+                <p>Developed responsive web applications using HTML5, CSS3, JavaScript, and AngularJS. Built RESTful APIs & microservices with Spring Boot, integrating Hibernate ORM for database interactions.</p>
+            </li>
+            <li class="employment-item">
+                <h3>Software Engineer - Provab Technosoft</h3>
+                <p><strong>Jul 2012 - Jul 2015</strong> | Bangalore, India</p>
+                <p>Designed and developed user interfaces using HTML, CSS, JavaScript, and jQuery. Built interactive user dashboards and integrated third-party payment gateways.</p>
+            </li>
+        </ul>
+    </div>
+
+    <div id="education" class="container section">
+        <h2>Education</h2>
+        <ul class="education-list">
+            <li class="education-item">
+                <h3>Master of Computer Science</h3>
+                <p><strong>Aug 2015 - Dec 2016</strong> | University of Central Missouri, Warrensburg, MO</p>
+            </li>
+            <li class="education-item">
+                <h3>Bachelor of Technology in Computer Science</h3>
+                <p><strong>2012</strong> | Jawaharlal Nehru Technological University, Hyderabad, India</p>
+            </li>
+        </ul>
+    </div>
+
+    <div id="skills" class="container section">
+        <h2>Technical Skills</h2>
         <ul class="skills-list">
-            <li class="skill">Spark</li>
-            <li class="skill">Oracle</li>
-            <li class="skill">MySQL</li>
-            <li class="skill">SQL Server</li>
-            <li class="skill">Redshift</li>
-            <li class="skill">DBeaver</li>
-            <li class="skill">S3</li>
-            <li class="skill">ETL</li>
-            <li class="skill">SQL</li>
-            <li class="skill">Python</li>
-            <li class="skill">Shell</li>
-            <li class="skill">Java</li>
-            <li class="skill">Spring</li>
-            <li class="skill">Spring Boot</li>
-            <li class="skill">Angular</li>
-            <li class="skill">HTML</li>
-            <li class="skill">CSS</li>
-            <li class="skill">AWS to Google Cloud Migration</li>
-            <li class="skill">Google Cloud Storage</li>
-            <li class="skill">Data Proc</li>
-            <li class="skill">App Engine</li>
+            <li>Java</li>
+            <li>Python</li>
+            <li>PHP</li>
+            <li>SQL</li>
+            <li>Spring Boot</li>
+            <li>Angular</li>
+            <li>MySQL</li>
+            <li>Oracle</li>
+            <li>MongoDB</li>
+            <li>AWS</li>
+            <li>GCP</li>
+            <li>Hadoop</li>
+            <li>Spark</li>
+            <li>Docker</li>
+            <li>Kubernetes</li>
+            <li>Airflow</li>
+            <li>Kafka</li>
+            <li>BigQuery</li>
+            <li>Looker</li>
         </ul>
     </div>
 
-    <div id="projects" class="container">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3 class="project-title">Software Engineer (July 2012 - July 2015)</h3>
-            <p class="project-details">Worked on various projects involving Java, Spring, HTML, CSS, JavaScript, jQuery, AJAX, and MySQL.</p>
-        </div>
-
-        <div class="project">
-            <h3 class="project-title">Java Software Developer (Jan 2017 - July 2017)</h3>
-            <p class="project-details">Contributed to web application development using Java.</p>
-        </div>
-
-        <div class="project">
-            <h3 class="project-title">Web Apps and Big Data Engineer (July 2017 - Present)</h3>
-            <p class="project-details">Developed scalable web applications and big data solutions.</p>
-        </div>
-    </div>
-
-    <div id="menu" class="container menu">
-        <h2>Personal Projects</h2>
-        <ul>
-            <li><a href="#">Project 1: Responsive Portfolio</a></li>
-            <li><a href="#">Project 2: Angular E-Commerce App</a></li>
-            <li><a href="#">Project 3: Flask Data Visualization Tool</a></li>
-        </ul>
-    </div>
+    <footer>
+        <p>&copy; 2025 Sreenath Veeraiahgari. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
