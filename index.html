@@ -1,210 +1,470 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sreenath Veeraiahgari - Software Developer</title>
+    <meta name="description"
+        content="Portfolio of Sreenath Veeraiahgari, Senior Data & AI Engineer specializing in enterprise AI agents, healthcare AI, RAG, LangChain, Google ADK, MCP, Vertex AI, BigQuery, Spark, and Airflow.">
+    <meta name="keywords"
+        content="Senior Data AI Engineer, Generative AI, AI Agents, LangChain, Google ADK, MCP, Vertex AI, RAG, BigQuery, FHIR, HL7, Cerner, Epic, Spark, Airflow">
+    <meta name="author" content="Sreenath Veeraiahgari">
+    <title>Sreenath Veeraiahgari | Senior Data & AI Engineer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
     <style>
+        :root {
+            --primary: #153b66;
+            --secondary: #2367a8;
+            --light: #f4f7fb;
+            --dark: #152230;
+            --muted: #5f6f7f;
+            --border: #dbe4ee;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--light);
+            color: var(--dark);
+            line-height: 1.65;
         }
 
-        header {
-            background-color: #35424a;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: Georgia, "Times New Roman", serif;
         }
 
-        header nav {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
+        .hero {
+            background: radial-gradient(circle at 85% 25%, rgba(71, 151, 224, .28), transparent 24%), linear-gradient(135deg, #071b31, #153b66 55%, #0c2744);
+            color: #fff;
+            padding: 72px 0 58px;
         }
 
-        header nav a {
-            color: white;
+        .hero h1 {
+            font-size: clamp(2.2rem, 5vw, 4rem);
+            font-weight: 700;
+            margin-bottom: .4rem;
+        }
+
+        .hero .title {
+            font-size: clamp(1.2rem, 2.5vw, 1.7rem);
+            color: #9ed4ff;
+            font-weight: 700;
+        }
+
+        .hero .tagline {
+            max-width: 850px;
+            margin: 18px auto 0;
+            color: #d7e8f7;
+            font-size: 1.05rem;
+        }
+
+        .hero-links a {
+            color: #fff;
             text-decoration: none;
-            font-size: 18px;
+            margin: 0 10px;
+            display: inline-block;
         }
 
-        header nav a:hover {
-            text-decoration: underline;
+        .hero-links a:hover {
+            color: #9ed4ff;
         }
 
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: white;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        .navbar {
+            background: rgba(7, 27, 49, .97);
         }
 
-        .project {
-            margin-top: 20px;
+        .navbar-brand,
+        .nav-link {
+            color: #fff !important;
         }
 
-        .project-title {
-            font-size: 20px;
-            font-weight: bold;
+        .nav-link:hover {
+            color: #9ed4ff !important;
+        }
+
+        section {
+            scroll-margin-top: 75px;
+        }
+
+        .section-card {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(21, 59, 102, .07);
+            padding: 30px;
+            margin-bottom: 28px;
+        }
+
+        .section-title {
+            color: var(--primary);
+            font-weight: 700;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 10px;
+            margin-bottom: 22px;
+        }
+
+        .skill-group h3 {
+            color: var(--primary);
+            font-size: 1.1rem;
             margin-bottom: 10px;
         }
 
-        .project-details {
-            font-size: 16px;
-            margin-bottom: 10px;
+        .skill-badge {
+            display: inline-block;
+            background: #eaf3fb;
+            color: #174f82;
+            border: 1px solid #cfe3f4;
+            border-radius: 999px;
+            padding: 6px 12px;
+            margin: 4px 5px 4px 0;
+            font-size: .9rem;
+            font-weight: 600;
         }
 
-        .skills {
-            background-color: #e9e9e9;
-            padding: 20px;
-            margin-top: 20px;
-            border-radius: 5px;
-        }
-
-        .skills-title {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        .skills-list {
-            list-style: none;
-            padding: 0;
+        .experience-header {
             display: flex;
+            justify-content: space-between;
+            gap: 20px;
             flex-wrap: wrap;
+            margin-bottom: 10px;
         }
 
-        .skill {
-            background-color: #35424a;
-            color: white;
-            font-size: 16px;
-            padding: 5px 10px;
-            margin: 5px;
-            border-radius: 3px;
+        .experience-header h3 {
+            color: var(--primary);
+            margin-bottom: 3px;
         }
 
-        .menu {
-            margin-top: 30px;
+        .company {
+            color: var(--secondary);
+            font-weight: 700;
         }
 
-        .menu h2 {
-            font-size: 22px;
+        .meta {
+            color: var(--muted);
+            font-weight: 600;
+        }
+
+        .impact-list {
+            padding-left: 1.2rem;
+            margin-bottom: 0;
+        }
+
+        .impact-list li {
+            margin-bottom: 10px;
+        }
+
+        .project-card {
+            height: 100%;
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 24px;
+            transition: transform .2s ease, box-shadow .2s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 28px rgba(21, 59, 102, .12);
+        }
+
+        .project-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: grid;
+            place-items: center;
+            background: #eaf3fb;
+            color: var(--secondary);
+            font-size: 1.35rem;
             margin-bottom: 15px;
         }
 
-        .menu ul {
-            list-style: none;
-            padding: 0;
+        .project-card h3 {
+            color: var(--primary);
+            font-size: 1.35rem;
         }
 
-        .menu ul li {
-            margin-bottom: 10px;
+        .project-card p {
+            color: #37495b;
         }
 
-        .menu ul li a {
+        .project-link {
             text-decoration: none;
-            font-size: 18px;
-            color: #35424a;
-            padding: 10px 15px;
-            display: block;
-            background-color: #e9e9e9;
-            border-radius: 5px;
+            font-weight: 700;
+            color: var(--secondary);
         }
 
-        .menu ul li a:hover {
-            background-color: #35424a;
-            color: white;
+        .project-link:hover {
+            color: var(--primary);
+            text-decoration: underline;
         }
 
-        @media (max-width: 768px) {
-            .skills-list {
-                flex-direction: column;
-                align-items: center;
+        .contact-grid a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+
+        .contact-grid a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background: #071b31;
+            color: #d7e8f7;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        @media (max-width:768px) {
+            .hero {
+                padding-top: 54px;
             }
 
-            .menu ul li a {
-                font-size: 16px;
+            .section-card {
+                padding: 22px;
             }
         }
     </style>
 </head>
+
 <body>
-    <header>
-        <h1>Sreenath Veeraiahgari</h1>
-        <p>Software Developer</p>
-        <nav>
-            <a href="#about">About Me</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#menu">Personal Projects</a>
-        </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#top">SV</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"><span
+                    class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#summary">Summary</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header id="top" class="hero text-center">
+        <div class="container">
+            <h1>Sreenath Veeraiahgari</h1>
+            <div class="title">Senior Data &amp; AI Engineer</div>
+            <p class="tagline">Building enterprise data platforms, healthcare AI applications, intelligent agents,
+                Retrieval-Augmented Generation systems, and cloud-native analytics solutions.</p>
+            <div class="hero-links mt-4">
+                <a href="mailto:reddysvc9@gmail.com"><i class="fas fa-envelope me-1"></i>Email</a>
+                <a href="https://www.linkedin.com/in/sreenath-reddy-81159258/" target="_blank"
+                    rel="noopener noreferrer"><i class="fab fa-linkedin me-1"></i>LinkedIn</a>
+                <a href="https://github.com/sreenathveer" target="_blank" rel="noopener noreferrer"><i
+                        class="fab fa-github me-1"></i>GitHub</a>
+            </div>
+        </div>
     </header>
-
-    <div id="about" class="container">
-        <h2>About Me</h2>
-        <p>Hello! I'm Sreenath Veeraiahgari, a Software Developer with experience in various technologies and tools.</p>
-        <p>I specialize in working with a wide range of technologies, including Spark, Oracle, MySQL, SQL Server, Redshift, DBeaver, S3, ETL, SQL, Python, Shell, Java, Spring, Spring Boot, Angular, HTML, CSS, AWS, Google Cloud, and more.</p>
-        <p>I'm experienced in handling tasks such as Google Cloud migration, Google Cloud Storage, Data Proc, App Engine, REST, Web Services, Git, SVN, Jira, ServiceNow, Kafka, MQ, ELK, production support, Agile methodologies, and sprints.</p>
-    </div>
-
-    <div id="skills" class="container skills">
-        <h2 class="skills-title">Technical Skills</h2>
-        <ul class="skills-list">
-            <li class="skill">Spark</li>
-            <li class="skill">Oracle</li>
-            <li class="skill">MySQL</li>
-            <li class="skill">SQL Server</li>
-            <li class="skill">Redshift</li>
-            <li class="skill">DBeaver</li>
-            <li class="skill">S3</li>
-            <li class="skill">ETL</li>
-            <li class="skill">SQL</li>
-            <li class="skill">Python</li>
-            <li class="skill">Shell</li>
-            <li class="skill">Java</li>
-            <li class="skill">Spring</li>
-            <li class="skill">Spring Boot</li>
-            <li class="skill">Angular</li>
-            <li class="skill">HTML</li>
-            <li class="skill">CSS</li>
-            <li class="skill">AWS to Google Cloud Migration</li>
-            <li class="skill">Google Cloud Storage</li>
-            <li class="skill">Data Proc</li>
-            <li class="skill">App Engine</li>
-        </ul>
-    </div>
-
-    <div id="projects" class="container">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3 class="project-title">Software Engineer (July 2012 - July 2015)</h3>
-            <p class="project-details">Worked on various projects involving Java, Spring, HTML, CSS, JavaScript, jQuery, AJAX, and MySQL.</p>
-        </div>
-
-        <div class="project">
-            <h3 class="project-title">Java Software Developer (Jan 2017 - July 2017)</h3>
-            <p class="project-details">Contributed to web application development using Java.</p>
-        </div>
-
-        <div class="project">
-            <h3 class="project-title">Web Apps and Big Data Engineer (July 2017 - Present)</h3>
-            <p class="project-details">Developed scalable web applications and big data solutions.</p>
-        </div>
-    </div>
-
-    <div id="menu" class="container menu">
-        <h2>Personal Projects</h2>
-        <ul>
-            <li><a href="#">Project 1: Responsive Portfolio</a></li>
-            <li><a href="#">Project 2: Angular E-Commerce App</a></li>
-            <li><a href="#">Project 3: Flask Data Visualization Tool</a></li>
-        </ul>
-    </div>
+    <main class="container py-5">
+        <section id="summary" class="section-card">
+            <h2 class="section-title">Professional Summary</h2>
+            <p>Senior Data &amp; AI Engineer with 10+ years of experience designing and delivering enterprise-scale data
+                platforms, cloud-native applications, and AI-powered healthcare solutions. Expertise in building
+                Generative AI, AI Agents, Retrieval-Augmented Generation (RAG), LangChain, Google Vertex AI, Google
+                Agent Development Kit (ADK), Model Context Protocol (MCP), LLMs, Prompt Engineering, Semantic Search,
+                and Vector Search solutions using enterprise healthcare data.</p>
+            <p class="mb-0">Proven experience developing scalable data pipelines, AI applications, and cloud
+                architectures on Google Cloud Platform, including BigQuery, Dataflow, Cloud Composer, Cloud Run, and
+                Cloud SQL, while integrating clinical and operational data from FHIR, HL7, Cerner, and Epic. Strong
+                background in Python, Java, Apache Spark, FastAPI, Spring Boot, SQL, and modern cloud technologies.</p>
+        </section>
+        <section id="experience" class="section-card">
+            <h2 class="section-title">Employment History</h2>
+            <div class="experience-header">
+                <div>
+                    <h3>Senior Data &amp; AI Engineer</h3>
+                    <div class="company">Dignity Health — Contract</div>
+                </div>
+                <div class="meta text-md-end">Jul 2017 – Present<br>Phoenix, AZ · Remote</div>
+            </div>
+            <ul class="impact-list">
+                <li>Architected enterprise Generative AI solutions using Google Vertex AI, LangChain, AI Agents, Google
+                    ADK, MCP, LLMs, RAG, Semantic Search, and Vector Search.</li>
+                <li>Led the ANV (Abuse, Neglect &amp; Violence) AI initiative, analyzing provider notes sourced through
+                    FHIR to identify potential abuse, neglect, human trafficking, and violence risk indicators for
+                    provider review.</li>
+                <li>Developed Denial Intelligence, an enterprise AI solution that uses Vertex AI, LangChain, ADK, MCP,
+                    BigQuery, and claims data to analyze denial patterns and support revenue-cycle workflows.</li>
+                <li>Designed and deployed Cloud Run-hosted MCP services and integrated Google ADK into enterprise web
+                    applications.</li>
+                <li>Built scalable cloud data platforms with Python, BigQuery, Dataflow, Cloud Composer/Airflow, Cloud
+                    Storage, Cloud Run, Cloud SQL, Apache Spark, and SQL.</li>
+                <li>Consumed and processed clinical and operational data from FHIR APIs, HL7 interfaces, Cerner, Epic,
+                    Oracle, SQL Server, and AWS Redshift.</li>
+                <li>Developed secure Python, FastAPI, Flask, Spring Boot, and REST API services for data, analytics, and
+                    AI-powered enterprise applications.</li>
+                <li>Built and optimized Spark and PySpark pipelines for large-scale data transformation, aggregation,
+                    validation, and analytics.</li>
+                <li>Designed BigQuery data models, ETL workflows, and performance-optimized SQL solutions supporting
+                    healthcare analytics and AI workloads.</li>
+                <li>Automated CI/CD and cloud deployments using Azure DevOps, Git, Docker, Kubernetes, Jira, and Agile
+                    delivery practices.</li>
+            </ul>
+            <hr class="my-4">
+            <div class="experience-header">
+                <div>
+                    <h3>Software Developer</h3>
+                    <div class="company">Insight Intelli</div>
+                </div>
+                <div class="meta text-md-end">Jan 2017 – Jul 2017<br>Charlotte, NC</div>
+            </div>
+            <p>Developed responsive web applications, REST APIs, and microservices using Java, Spring Boot, Spring MVC,
+                Hibernate, AngularJS, JavaScript, MongoDB, and relational databases.</p>
+            <hr class="my-4">
+            <div class="experience-header">
+                <div>
+                    <h3>Software Engineer</h3>
+                    <div class="company">Provab Technosoft</div>
+                </div>
+                <div class="meta text-md-end">Jul 2012 – Jul 2015<br>Bengaluru, India</div>
+            </div>
+            <p class="mb-0">Developed Java, PHP, Spring, JSP, Hibernate, JavaScript, jQuery, Magento, and CodeIgniter
+                applications, including dashboards, CMS platforms, payment integrations, and LAMP deployments.</p>
+        </section>
+        <section id="projects" class="section-card">
+            <h2 class="section-title">Selected Projects</h2>
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <article class="project-card">
+                        <div class="project-icon"><i class="fas fa-user-shield"></i></div>
+                        <h3>ANV Healthcare AI</h3>
+                        <p>Enterprise healthcare AI solution that analyzes provider notes received through FHIR to
+                            identify potential Abuse, Neglect, Violence, and human-trafficking risk indicators. Uses
+                            LangChain, Vertex AI Agents, Google ADK, MCP, BigQuery, RAG, and secure cloud services.</p>
+                        <div><span class="skill-badge">Vertex AI</span><span class="skill-badge">LangChain</span><span
+                                class="skill-badge">FHIR</span><span class="skill-badge">ADK</span><span
+                                class="skill-badge">MCP</span><span class="skill-badge">BigQuery</span></div>
+                    </article>
+                </div>
+                <div class="col-lg-6">
+                    <article class="project-card">
+                        <div class="project-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+                        <h3>Denial Intelligence</h3>
+                        <p>Enterprise claims-denial intelligence platform that analyzes historical claims, denial
+                            patterns, and contributing factors to support revenue-cycle workflows and AI-assisted
+                            decision-making.</p>
+                        <div><span class="skill-badge">AI Agents</span><span class="skill-badge">Vertex AI</span><span
+                                class="skill-badge">LangChain</span><span class="skill-badge">ADK</span><span
+                                class="skill-badge">MCP</span><span class="skill-badge">BigQuery</span></div>
+                    </article>
+                </div>
+                <div class="col-lg-6">
+                    <article class="project-card">
+                        <div class="project-icon"><i class="fas fa-baseball-bat-ball"></i></div>
+                        <h3>IPL Cricket AI Agent</h3>
+                        <p>AI-powered cricket analytics application using IPL data from 2008–2025. Supports
+                            natural-language questions about players, matches, strike rates, scoring ranges, and
+                            historical performance using agentic workflows and semantic retrieval.</p>
+                        <div><span class="skill-badge">LangChain</span><span class="skill-badge">Google ADK</span><span
+                                class="skill-badge">MCP</span><span class="skill-badge">Qdrant</span><span
+                                class="skill-badge">RAG</span><span class="skill-badge">Vector Search</span><span
+                                class="skill-badge">React</span><span class="skill-badge">FastAPI</span></div>
+                    </article>
+                </div>
+                <div class="col-lg-6">
+                    <article class="project-card">
+                        <div class="project-icon"><i class="fas fa-robot"></i></div>
+                        <h3>OpenAI Data Search Agent</h3>
+                        <p>Web application that converts natural-language questions into SQL-style filtering logic for
+                            Black Friday deals data, simplifying data exploration and search.</p>
+                        <p class="mb-0"><a class="project-link" href="https://ourkisan.com/blackfridaydeals"
+                                target="_blank" rel="noopener noreferrer">View Project <i
+                                    class="fas fa-arrow-up-right-from-square ms-1"></i></a></p>
+                    </article>
+                </div>
+                <div class="col-lg-6">
+                    <article class="project-card">
+                        <div class="project-icon"><i class="fas fa-trophy"></i></div>
+                        <h3>IPL Games Prediction Platform</h3>
+                        <p>Prediction platform where users forecast IPL match outcomes, participate in groups, track
+                            leaderboards, and securely register using mobile verification.</p>
+                        <p class="mb-0"><a class="project-link" href="https://ourkisan.com/" target="_blank"
+                                rel="noopener noreferrer">View Project <i
+                                    class="fas fa-arrow-up-right-from-square ms-1"></i></a></p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section id="skills" class="section-card">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="row g-4">
+                <div class="col-md-6 skill-group">
+                    <h3>AI &amp; Generative AI</h3><span class="skill-badge">Vertex AI</span><span
+                        class="skill-badge">LangChain</span><span class="skill-badge">Google ADK</span><span
+                        class="skill-badge">MCP</span><span class="skill-badge">AI Agents</span><span
+                        class="skill-badge">RAG</span><span class="skill-badge">LLMs</span><span
+                        class="skill-badge">Prompt Engineering</span><span class="skill-badge">Semantic
+                        Search</span><span class="skill-badge">Vector Search</span><span
+                        class="skill-badge">Embeddings</span><span class="skill-badge">Qdrant</span>
+                </div>
+                <div class="col-md-6 skill-group">
+                    <h3>Data Engineering</h3><span class="skill-badge">BigQuery</span><span
+                        class="skill-badge">Dataflow</span><span class="skill-badge">Airflow</span><span
+                        class="skill-badge">Cloud Composer</span><span class="skill-badge">Apache Spark</span><span
+                        class="skill-badge">PySpark</span><span class="skill-badge">Kafka</span><span
+                        class="skill-badge">Redshift</span><span class="skill-badge">Hadoop</span><span
+                        class="skill-badge">ETL</span><span class="skill-badge">Data Warehousing</span>
+                </div>
+                <div class="col-md-6 skill-group">
+                    <h3>Healthcare Data</h3><span class="skill-badge">FHIR</span><span
+                        class="skill-badge">HL7</span><span class="skill-badge">Cerner</span><span
+                        class="skill-badge">Epic</span><span class="skill-badge">Claims Data</span><span
+                        class="skill-badge">Clinical Notes</span><span class="skill-badge">Healthcare Analytics</span>
+                </div>
+                <div class="col-md-6 skill-group">
+                    <h3>Programming, Cloud &amp; DevOps</h3><span class="skill-badge">Python</span><span
+                        class="skill-badge">Java</span><span class="skill-badge">SQL</span><span
+                        class="skill-badge">FastAPI</span><span class="skill-badge">Flask</span><span
+                        class="skill-badge">Spring Boot</span><span class="skill-badge">GCP</span><span
+                        class="skill-badge">AWS</span><span class="skill-badge">Azure</span><span
+                        class="skill-badge">Cloud Run</span><span class="skill-badge">Docker</span><span
+                        class="skill-badge">Kubernetes</span><span class="skill-badge">Azure DevOps</span><span
+                        class="skill-badge">Git</span>
+                </div>
+            </div>
+        </section>
+        <section id="education" class="section-card">
+            <h2 class="section-title">Education</h2>
+            <div class="mb-4">
+                <h3 class="h5 mb-1">Master of Science in Computer Science</h3>
+                <div class="company">University of Central Missouri</div>
+                <div class="meta">Warrensburg, MO · 2016</div>
+            </div>
+            <div>
+                <h3 class="h5 mb-1">Bachelor of Technology in Computer Science</h3>
+                <div class="company">Jawaharlal Nehru Technological University</div>
+                <div class="meta">Hyderabad, India · 2012</div>
+            </div>
+        </section>
+        <section id="contact" class="section-card">
+            <h2 class="section-title">Contact</h2>
+            <div class="row contact-grid g-3">
+                <div class="col-md-4"><i class="fas fa-location-dot me-2"></i>Bloomington, Illinois</div>
+                <div class="col-md-4"><i class="fas fa-envelope me-2"></i><a
+                        href="mailto:reddysvc9@gmail.com">reddysvc9@gmail.com</a></div>
+                <div class="col-md-4"><i class="fab fa-linkedin me-2"></i><a
+                        href="https://www.linkedin.com/in/sreenath-reddy-81159258/" target="_blank"
+                        rel="noopener noreferrer">LinkedIn Profile</a></div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">&copy; <span id="year"></span> Sreenath Veeraiahgari. All rights reserved.</div>
+    </footer>
+    <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
